@@ -44,7 +44,7 @@ def prediction():
     
     if from_contry == to_contry:
         exc_rate = 1
-       else:
+    else:
         exc_rate = np.round((pred_2/pred_1),2) # currency exchange rate
     amt = int(input_features[-1])
     
