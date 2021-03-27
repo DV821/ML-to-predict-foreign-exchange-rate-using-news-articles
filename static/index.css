@@ -135,11 +135,11 @@ body{
   text-decoration: none;
 }
 .colorchange{
-  animation: colorchangeakash 1s infinite;
+  animation: colorchangetechno 1s infinite;
 }
-@keyframes colorchangeakash{
+@keyframes colorchangetechno{
  0%{color: red;}
- 25%{color: #bf55ec;}
+ 25%{color: #FFCF00;}
    50%{color: white;}
-   100%{color: #bf55ec;}
+   100%{color: #4caf50;}
 }
