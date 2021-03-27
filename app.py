@@ -41,8 +41,11 @@ def prediction():
     scaler2 = pkl.load(open(f'Scalers/scaler_{cont_dict[to_contry]}.pkl','rb'))
     data2 = scaler2.transform([data2]) # scaling
     pred_2 = model2.predict(data2)[0] # predicting
-
-    exc_rate = np.round((pred_2/pred_1),2) # currency exchange rate
+    
+    if from_contry == to_contry:
+        exc_rate = 1
+       else:
+        exc_rate = np.round((pred_2/pred_1),2) # currency exchange rate
     amt = int(input_features[-1])
     
     return render_template('index.html', prediction_text=f'{amt} {currency[from_contry]} = {amt*exc_rate} {currency[to_contry]}',color_text='red')
